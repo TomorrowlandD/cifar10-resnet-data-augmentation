@@ -47,7 +47,17 @@ nvidia-smi
 python -c "import torch; print(torch.__version__); print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CUDA not available')"
 ```
 
-## Smoke Test
+## 本机轻量检查
+
+推送到服务器前，可以先在本机执行不下载数据、不训练模型的轻量检查：
+
+```bash
+python 源代码/check_step4.py
+```
+
+该命令会检查三组配置是否能读取、模型是否能完成一次前向传播、optimizer / scheduler 是否能按配置构建，以及输出路径是否可解析。
+
+## 服务器 Smoke Test
 
 正式训练前，每组实验先跑 1 个 epoch：
 
