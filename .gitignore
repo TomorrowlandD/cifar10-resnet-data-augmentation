@@ -1,0 +1,62 @@
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Dataset and large training artifacts
+data/
+源代码/data/
+实验结果/checkpoints/
+**/checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Temporary training outputs
+runs/
+wandb/
+tensorboard/
+lightning_logs/
+outputs/
+tmp/
+temp/
+
+# Keep lightweight experiment outputs trackable by default:
+# - 实验结果/*.csv
+# - 实验结果/curves/*.png
+# - 实验结果/confusion_matrix/*.png
+# - 实验结果/predictions/*.png
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archives and packaged submissions
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz

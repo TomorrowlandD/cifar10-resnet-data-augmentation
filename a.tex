@@ -1,0 +1,147 @@
+\documentclass[12pt,a4paper]{ctexart}
+
+% =========================
+% 基本宏包
+% =========================
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+
+% =========================
+% 页面设置
+% =========================
+\geometry{
+  left=2.5cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=2.5cm
+}
+
+% =========================
+% 页码设置：-1-
+% =========================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{-\thepage-}
+\renewcommand{\headrulewidth}{0pt}
+
+% =========================
+% 段落与表格设置
+% =========================
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.35}
+\newcommand{\checkbox}{\raisebox{-0.15ex}{\fbox{\rule{0pt}{1.4ex}\hspace{1.4ex}}}}
+
+% =========================
+% 教师评语选项对齐命令
+% 用固定宽度控制 A / B / C 的起始位置
+% =========================
+\newcommand{\evalitem}[4]{%
+\makebox[5.9cm][l]{\quad #1}%
+\makebox[2.3cm][l]{A. #2\checkbox}%
+\makebox[3.0cm][l]{B. #3\checkbox}%
+\makebox[2.5cm][l]{C. #4\checkbox}%
+}
+
+% =========================
+% 实验报告标准头
+% =========================
+\newcommand{\reportheader}{
+\begin{center}
+    {\zihao{3}\heiti 昆明理工大学信息工程与自动化学院学生实验报告}\\[6pt]
+    {\zihao{-4}（2025—2026 学年第二学期）}
+\end{center}
+
+\vspace{1.2em}
+
+% 表格上方信息栏
+\noindent
+\begin{tabularx}{\textwidth}{@{}l >{\centering\arraybackslash}X r@{}}
+课程名称：计算机视觉实践与应用
+&
+开课实验室：信自楼
+&
+2026年6月15日
+\end{tabularx}
+
+\vspace{0.7em}
+
+% 正式表格
+\noindent
+\small
+\begin{tabularx}{\textwidth}{
+|>{\centering\arraybackslash}m{1.6cm}
+|>{\centering\arraybackslash}m{1.6cm}
+|>{\centering\arraybackslash}m{1.3cm}
+|>{\centering\arraybackslash}m{2.5cm}
+|>{\centering\arraybackslash}m{1.3cm}
+|>{\centering\arraybackslash}m{1.7cm}
+|>{\centering\arraybackslash}m{1.3cm}
+|>{\centering\arraybackslash}X|}
+\hline
+年级、专业、班级 & 计科232
+& 学号 & JL5720231505
+& 姓名 & 邓国豪
+& 成绩 &  \\
+\hline
+
+实验项目名称
+& \multicolumn{5}{l|}{\quad 基于数据增强与残差网络的 CIFAR-10 图像分类实验研究}
+& \makecell{指导教\\师}
+& 李华锋 \\
+\hline
+
+\multirow{7}{*}{\makecell{教\\师\\评\\语}}
+& \multicolumn{7}{l|}{\evalitem{该同学是否了解实验原理：}{了解}{基本了解}{不了解}} \\[0.45em]
+
+& \multicolumn{7}{l|}{\evalitem{该同学的实验能力：}{强}{中等}{差}} \\[0.45em]
+
+& \multicolumn{7}{l|}{\evalitem{该同学的实验是否达到要求：}{达到}{基本达到}{未达到}} \\[0.45em]
+
+& \multicolumn{7}{l|}{\evalitem{实验报告是否规范：}{规范}{基本规范}{不规范}} \\[0.45em]
+
+& \multicolumn{7}{l|}{\evalitem{实验过程是否详细记录：}{详细}{一般}{没有}} \\[0.7em]
+
+& \multicolumn{7}{r|}{教师签名：\hspace{4.8cm}\rule{0pt}{1.5cm}} \\
+
+& \multicolumn{7}{r|}{2026年6月15日\hspace{2cm}\rule{0pt}{0.8cm}} \\
+\hline
+\end{tabularx}
+
+\normalsize
+\vspace{2em}
+}
+
+% =========================
+% 正文开始
+% =========================
+\begin{document}
+
+\reportheader
+
+\section*{一、实验目的}
+
+这里开始写实验报告正文。因为前面只是普通的表格块，所以正文会直接接在标准头后面，不会自动换页。
+
+\section*{二、实验原理}
+
+这里填写实验原理。
+
+\section*{三、实验内容与步骤}
+
+这里填写实验内容与具体步骤。
+
+\section*{四、实验结果与分析}
+
+这里填写实验结果、运行截图说明、结果分析等内容。
+
+\section*{五、实验总结}
+
+这里填写本次实验的总结、收获和不足。
+
+\end{document}
