@@ -1,0 +1,25 @@
+experiment:
+  id: exp3
+  name: exp3_resnet18
+  description: ResNet18 adapted for CIFAR-10 with data augmentation
+model:
+  type: resnet18_cifar
+  num_classes: 10
+data:
+  dataset: CIFAR10
+  data_dir: 源代码/data
+  val_ratio: 0.1
+  augmentation: true
+  num_workers: 4
+  download: true
+training:
+  seed: 42
+  batch_size: 256
+  epochs: 25
+  optimizer: sgd
+  learning_rate: 0.1
+  weight_decay: 0.0005
+  momentum: 0.9
+  scheduler: cosine
+output:
+  output_dir: 实验结果

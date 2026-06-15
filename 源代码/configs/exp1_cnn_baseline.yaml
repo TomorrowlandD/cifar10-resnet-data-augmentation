@@ -1,0 +1,25 @@
+experiment:
+  id: exp1
+  name: exp1_cnn_baseline
+  description: SimpleCNN without data augmentation
+model:
+  type: simple_cnn
+  num_classes: 10
+data:
+  dataset: CIFAR10
+  data_dir: 源代码/data
+  val_ratio: 0.1
+  augmentation: false
+  num_workers: 4
+  download: true
+training:
+  seed: 42
+  batch_size: 256
+  epochs: 15
+  optimizer: adamw
+  learning_rate: 0.001
+  weight_decay: 0.0005
+  momentum: 0.9
+  scheduler: cosine
+output:
+  output_dir: 实验结果
